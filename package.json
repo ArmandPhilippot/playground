@@ -1,0 +1,21 @@
+{
+  "name": "playground",
+  "description": "A collection of small apps.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Armand Philippot",
+    "email": "git@armand.philippot.eu",
+    "url": "https://armand.philippot.eu/"
+  },
+  "homepage": "https://github.com/ArmandPhilippot/playground#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ArmandPhilippot/playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmandPhilippot/playground/issues"
+  },
+  "private": "true",
+  "packageManager": "pnpm@10.10.0"
+}
