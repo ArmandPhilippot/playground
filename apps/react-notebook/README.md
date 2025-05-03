@@ -20,8 +20,6 @@ A notebook implementation with React.
 
 ## Previews
 
-You can see a live preview here: https://demo.armandphilippot.com/#notebook
-
 | Cover | Page |
 | --- | --- |
 | ![Cover preview](./public/preview-cover.jpg) | ![Page preview](./public/preview-page.jpg) |

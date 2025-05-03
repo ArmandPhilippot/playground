@@ -20,10 +20,4 @@ A meme generator implementation with React.
 
 ## Preview
 
-You can see a live preview here: https://demo.armandphilippot.com/#meme-generator
-
 ![Meme generator preview](./public/preview-meme-generator.jpg)
-
-## License
-
-This project is open source and available under the [MIT license](../LICENSE).
