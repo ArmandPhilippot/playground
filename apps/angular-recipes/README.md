@@ -1,4 +1,4 @@
-# Recipes
+# Angular Recipes
 
 A recipes app implemented with Angular.
 
@@ -17,9 +17,7 @@ A recipes app implemented with Angular.
 
 ## Preview
 
-You can see a live preview here: https://demo.armandphilippot.com/#recipe
-
-![Preview](../assets/preview-recipes.jpg)
+![Preview](./assets/preview-recipes.jpg)
 
 ## License
 

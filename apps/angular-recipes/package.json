@@ -1,7 +1,23 @@
 {
-  "name": "recipes",
+  "name": "angular-recipes",
   "description": "A recipes app implemented with Angular.",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Armand Philippot",
+    "email": "git@armand.philippot.eu",
+    "url": "https://armand.philippot.eu"
+  },
+  "homepage": "https://github.com/ArmandPhilippot/playground/apps/angular-recipes#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ArmandPhilippot/playground.git",
+    "directory": "apps/angular-recipes"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmandPhilippot/playground/issues"
+  },
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
@@ -9,7 +25,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.2",
     "@angular/common": "~13.2.2",
