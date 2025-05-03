@@ -37,8 +37,6 @@ Password: `demo`
 
 ## Preview
 
-You can see a live preview here: https://demo.armandphilippot.com/#todos
-
 | Todos list | Single todo |
 | --- | --- |
 | ![List preview](./assets/preview-todos-list.jpg) | ![Todo preview](./assets/preview-single-todo.jpg) |

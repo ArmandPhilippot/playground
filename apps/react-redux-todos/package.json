@@ -5,8 +5,17 @@
   "license": "MIT",
   "author": {
     "name": "Armand Philippot",
-    "url": "https://www.armandphilippot.com",
-    "email": "contact@armandphilippot.com"
+    "email": "git@armand.philippot.eu",
+    "url": "https://armand.philippot.eu"
+  },
+  "homepage": "https://github.com/ArmandPhilippot/playground/apps/react-redux-todos#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ArmandPhilippot/playground.git",
+    "directory": "apps/react-redux-todos"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmandPhilippot/playground/issues"
   },
   "private": true,
   "dependencies": {
