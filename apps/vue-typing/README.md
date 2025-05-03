@@ -19,7 +19,3 @@ Password: demo
 ## Preview
 
 ![Typing app preview](./public/vue-typing-app.jpg)
-
-## License
-
-This project is open source and available under the [MIT license](../LICENSE).
