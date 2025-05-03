@@ -2,21 +2,19 @@
 
 A typing app implementation with Vue.
 
-## Requirements
-
-- Yarn
-
 ## How to
+
+User: demo
+Password: demo
 
 ### Start the development version
 
-`yarn && yarn run serve`
+`pnpm i && pnpm serve`
 
 ### Start the build version:
 
-1. `yarn && yarn run build`
-2. (`yarn global add serve`)
-3. `serve -s dist`
+1. `pnpm i && pnpm build`
+2. `pnpm serve -s dist`
 
 ## Preview
 
