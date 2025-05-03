@@ -6,14 +6,13 @@ A recipes app implemented with Angular.
 
 ### Start the development version
 
-1. Run `yarn run start`
+1. Run `pnpm start`
 2. Navigate to `http://localhost:4200/` (browser normally opens automatically).
 
 ### Start the build version
 
-1. Run `yarn run build` to build the project
-2. Navigate to `dist/` directory.
-3. Open `index.html`
+1. Run `pnpm build` to build the project
+2. `pnpm serve -s dist/recipes`
 
 ## Preview
 
