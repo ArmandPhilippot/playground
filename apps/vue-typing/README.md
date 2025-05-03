@@ -20,8 +20,6 @@ A typing app implementation with Vue.
 
 ## Preview
 
-You can see a live preview here: https://demo.armandphilippot.com/#typing
-
 ![Typing app preview](./public/vue-typing-app.jpg)
 
 ## License

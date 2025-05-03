@@ -1,8 +1,22 @@
 {
   "name": "vue-typing-app",
   "description": "A typing app implementation with VueJS.",
-  "license": "MIT",
   "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Armand Philippot",
+    "email": "git@armand.philippot.eu",
+    "url": "https://armand.philippot.eu"
+  },
+  "homepage": "https://github.com/ArmandPhilippot/playground/apps/vue-typing#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ArmandPhilippot/playground.git",
+    "directory": "apps/vue-typing"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmandPhilippot/playground/issues"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
