@@ -2,21 +2,16 @@
 
 A meme generator implementation with React.
 
-## Requirements
-
-- Yarn
-
 ## How to
 
 ### Start the development version
 
-`yarn run start`
+`pnpm start`
 
 ### Start the build version:
 
-1. `yarn run build`
-2. (`yarn global add serve`)
-3. `serve -s build`
+1. `pnpm build`
+2. `pnpm serve -s build` (or `BUILD_PATH` if set)
 
 ## Preview
 

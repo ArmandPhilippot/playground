@@ -13,21 +13,16 @@ The app has different views:
 - a single todo view where user can see todo details and edit data
 - an account view
 
-## Requirements
-
-- Yarn
-
 ## How to
 
 ### Start the development version
 
-`yarn run start`
+`pnpm start`
 
 ### Start the build version:
 
-1. `yarn run build`
-2. (`yarn global add serve`)
-3. `serve -s build`
+1. `pnpm build`
+2. `pnpm serve -s build` (or `BUILD_PATH` if set)
 
 ## Login
 
@@ -37,12 +32,12 @@ Password: `demo`
 
 ## Preview
 
-| Todos list | Single todo |
-| --- | --- |
+| Todos list                                       | Single todo                                       |
+| ------------------------------------------------ | ------------------------------------------------- |
 | ![List preview](./assets/preview-todos-list.jpg) | ![Todo preview](./assets/preview-single-todo.jpg) |
 
-| Login Page | Account Page |
-| --- | --- |
+| Login Page                                        | Account Page                                          |
+| ------------------------------------------------- | ----------------------------------------------------- |
 | ![Login preview](./assets/preview-todo-login.jpg) | ![Account preview](./assets/preview-todo-account.jpg) |
 
 ## Disclaimer
