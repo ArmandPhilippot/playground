@@ -1,10 +1,28 @@
-# Dependencies
-node_modules
-yarn-error*
+# build output
+dist/
 
-# Misc
-.vscode
+# cache
+.eslintcache
+.npm
+*.tsbuildinfo
 
-# Dotenv
-.env*
+# dependencies
+node_modules/
+
+# environment variables
+.env
 !.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+.idea/
+
+# tests coverage
+coverage/

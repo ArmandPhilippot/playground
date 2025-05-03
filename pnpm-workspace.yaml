@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+onlyBuiltDependencies:
+  - '@angular/cli'
+  - '@parcel/watcher'
+  - core-js
+  - core-js-pure
+  - esbuild
+  - nice-napi
+  - yorkie

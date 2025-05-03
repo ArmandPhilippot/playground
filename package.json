@@ -16,6 +16,26 @@
   "bugs": {
     "url": "https://github.com/ArmandPhilippot/playground/issues"
   },
-  "private": "true",
-  "packageManager": "pnpm@10.10.0"
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
+  "scripts": {
+    "fix": "pnpm run \"/^fix:.*/\"",
+    "fix:formatting": "prettier . --write",
+    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint:formatting": "prettier . --check",
+    "lint:spelling": "cspell \"**\" --no-progress",
+    "prepare": "husky"
+  },
+  "optionalDependencies": {
+    "husky": "^9.1.7"
+  },
+  "devDependencies": {
+    "@arphi/commitlint-config": "^1.0.2",
+    "@arphi/prettier-config": "^1.0.0",
+    "@commitlint/cli": "^19.8.0",
+    "cspell": "^8.19.4",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
+  }
 }
