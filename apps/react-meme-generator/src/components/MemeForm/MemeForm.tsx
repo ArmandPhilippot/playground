@@ -33,7 +33,7 @@ function MemeForm({ headlines, setHeadlines }: MemeFormProps) {
     e.preventDefault();
   };
 
-  const fieldsetsList = headlines.map((headline) => {
+  const fieldsetList = headlines.map((headline) => {
     return (
       <MemeFieldset
         key={headline.id}
@@ -53,8 +53,8 @@ function MemeForm({ headlines, setHeadlines }: MemeFormProps) {
   return (
     <div className="meme-form">
       <Form onSubmitHandler={onSubmit}>
-        {fieldsetsList}
-        {fieldsetsList.length < 4 && (
+        {fieldsetList}
+        {fieldsetList.length < 4 && (
           <Button body="Add new text" onClick={addNewFieldset} modifier="add" />
         )}
       </Form>
