@@ -1,12 +1,41 @@
-import { useEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type Dispatch,
+  type FormEvent,
+  type SetStateAction,
+} from "react";
 import Form from "../../commons/Form";
 import Input from "../../commons/Input";
 
-function Headline({ id, text, fontSize, xPos, yPos, setHeadlines }) {
-  const inputRef = useRef(null);
+export type HeadlineType = {
+  id: number;
+  legend?: string;
+  text: string;
+  fontSize: string | number;
+  fontUnit?: string;
+  xPos?: string | undefined;
+  yPos?: string | undefined;
+};
+
+type HeadlineProps = HeadlineType & {
+  setHeadlines: Dispatch<SetStateAction<HeadlineType[]>>;
+};
+
+function Headline({
+  id,
+  text,
+  fontSize,
+  xPos,
+  yPos,
+  setHeadlines,
+}: HeadlineProps) {
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [isEditing, setIsEditing] = useState(false);
   useEffect(() => {
-    isEditing && inputRef.current.focus();
+    isEditing && inputRef.current && inputRef.current.focus();
   });
 
   const [inputValue, setInputValue] = useState(text);
@@ -61,12 +90,12 @@ function Headline({ id, text, fontSize, xPos, yPos, setHeadlines }) {
     ...getXPos(),
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsEditing(false);
   };
 
-  const updateText = (e) => {
+  const updateText = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 

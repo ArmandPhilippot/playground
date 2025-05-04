@@ -1,11 +1,30 @@
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+  type ChangeEvent,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 import Button from "../../commons/Button";
 import Fieldset from "../../commons/Fieldset";
 import Input from "../../commons/Input";
 import InputRange from "../../commons/InputRange";
 import Select from "../../commons/Select";
+import type { HeadlineType } from "../../MemePreview/Headline/Headline";
 
-function MemeFieldset({ headline, setHeadline, xOptions, yOptions }) {
+type MemeFieldsetProps = {
+  headline: HeadlineType;
+  setHeadline: Dispatch<SetStateAction<HeadlineType[]>>;
+  xOptions: string[];
+  yOptions: string[];
+};
+
+function MemeFieldset({
+  headline,
+  setHeadline,
+  xOptions,
+  yOptions,
+}: MemeFieldsetProps) {
   const { id, legend, text, fontSize, fontUnit, xPos, yPos } = headline;
   const [inputTextValue, setInputTextValue] = useState(text);
   const [inputRangeValue, setInputRangeValue] = useState(fontSize);
@@ -31,7 +50,7 @@ function MemeFieldset({ headline, setHeadline, xOptions, yOptions }) {
     });
   }, [setHeadline, id, inputTextValue, inputRangeValue, selectX, selectY]);
 
-  const onChange = (e) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     switch (e.target.name) {
       case "inputText":
         setInputTextValue(e.target.value);
@@ -50,12 +69,12 @@ function MemeFieldset({ headline, setHeadline, xOptions, yOptions }) {
     }
   };
 
-  const onClick = (e) => {
+  const onClick = () => {
     setHeadline((previous) => previous.filter((object) => object.id !== id));
   };
 
   return (
-    <Fieldset id={id} legend={legend}>
+    <Fieldset id={`${id}`} legend={legend}>
       <Button body="Delete" modifier="delete" onClick={onClick} />
       <div className="form__item">
         <Input

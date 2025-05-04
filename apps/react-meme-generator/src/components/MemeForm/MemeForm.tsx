@@ -1,9 +1,20 @@
-import { useState } from "react";
+import {
+  useState,
+  type Dispatch,
+  type FormEvent,
+  type SetStateAction,
+} from "react";
 import Button from "../commons/Button";
 import Form from "../commons/Form";
 import MemeFieldset from "./MemeFieldset/MemeFieldset";
+import type { HeadlineType } from "../MemePreview/Headline/Headline";
 
-function MemeForm({ headlines, setHeadlines }) {
+type MemeFormProps = {
+  headlines: HeadlineType[];
+  setHeadlines: Dispatch<SetStateAction<HeadlineType[]>>;
+};
+
+function MemeForm({ headlines, setHeadlines }: MemeFormProps) {
   const [fieldsetId, setFieldsetId] = useState(1);
   const horizontalOptions = ["Left", "Right", "Center"];
   const verticalOptions = ["Top", "Bottom", "Middle"];
@@ -18,7 +29,7 @@ function MemeForm({ headlines, setHeadlines }) {
     yPos: verticalOptions[(fieldsetId - 1) % verticalOptions.length],
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 

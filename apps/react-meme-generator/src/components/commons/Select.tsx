@@ -1,6 +1,21 @@
+import type { ChangeEventHandler, ComponentProps } from "react";
 import Option from "./Option";
 
-function Select({ id, name, label, options, value, onChangeHandler }) {
+type SelectProps = ComponentProps<"select"> & {
+  additionalClasses?: string;
+  label: string;
+  onChangeHandler?: ChangeEventHandler<HTMLSelectElement> | undefined;
+  options: string[];
+};
+
+function Select({
+  id,
+  name,
+  label,
+  options,
+  value,
+  onChangeHandler,
+}: SelectProps) {
   const optionsList = options.map((option) => {
     const optionValue = option.replace(" ", "-");
     return <Option key={optionValue} value={optionValue} body={option} />;

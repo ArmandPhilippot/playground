@@ -1,10 +1,17 @@
+import type { ComponentProps, CSSProperties, FormEventHandler } from "react";
+
+type FormProps = ComponentProps<"form"> & {
+  onSubmitHandler: FormEventHandler<HTMLFormElement>;
+  styles?: CSSProperties | undefined;
+};
+
 function Form({
   children,
   action = "#",
   method = "post",
   styles,
   onSubmitHandler,
-}) {
+}: FormProps) {
   return (
     <form
       action={action}

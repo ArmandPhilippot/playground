@@ -1,4 +1,17 @@
-import { forwardRef } from "react";
+import {
+  forwardRef,
+  type ChangeEventHandler,
+  type ComponentProps,
+  type FocusEventHandler,
+  type Ref,
+} from "react";
+
+type InputProps = ComponentProps<"input"> & {
+  additionalClasses?: string;
+  label?: string;
+  onBlurHandler?: FocusEventHandler<HTMLInputElement> | undefined;
+  onChangeHandler?: ChangeEventHandler<HTMLInputElement> | undefined;
+};
 
 function Input(
   {
@@ -10,8 +23,8 @@ function Input(
     onChangeHandler,
     onBlurHandler,
     additionalClasses = "",
-  },
-  ref
+  }: InputProps,
+  ref: Ref<HTMLInputElement>
 ) {
   const classNames = `form__input ${additionalClasses}`;
 

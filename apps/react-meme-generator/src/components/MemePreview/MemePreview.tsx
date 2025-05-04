@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import Button from "../commons/Button";
-import Headline from "./Headline/Headline";
+import Headline, { type HeadlineType } from "./Headline/Headline";
 
 async function fetchMemes() {
   const response = await fetch("https://api.imgflip.com/get_memes");
@@ -8,8 +8,18 @@ async function fetchMemes() {
   return await result;
 }
 
-function MemePreview({ headlines, setHeadlines }) {
-  const [memesList, setMemesList] = useState([]);
+type Meme = {
+  name: string;
+  url: string;
+};
+
+type MemePreviewProps = {
+  headlines: HeadlineType[];
+  setHeadlines: Dispatch<SetStateAction<HeadlineType[]>>;
+};
+
+function MemePreview({ headlines, setHeadlines }: MemePreviewProps) {
+  const [memesList, setMemesList] = useState<Meme[]>([]);
   const [isFetched, setIsFetched] = useState(false);
   useEffect(() => {
     fetchMemes().then((object) => setMemesList(object.data.memes));
@@ -17,9 +27,11 @@ function MemePreview({ headlines, setHeadlines }) {
     return () => setIsFetched(false);
   }, [setIsFetched]);
 
-  const [selectedMeme, setSelectedMeme] = useState({});
+  const [selectedMeme, setSelectedMeme] = useState<Meme | undefined>(undefined);
   useEffect(() => {
-    setSelectedMeme(memesList[5]);
+    const meme = memesList[5];
+    if (!meme) return;
+    setSelectedMeme(meme);
   }, [memesList]);
 
   const getRandomMeme = () => {

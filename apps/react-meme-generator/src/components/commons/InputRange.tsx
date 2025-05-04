@@ -1,3 +1,12 @@
+import type { ChangeEventHandler, ComponentProps } from "react";
+
+type InputRangeProps = ComponentProps<"input"> & {
+  additionalClasses?: string;
+  label: string;
+  onChangeHandler: ChangeEventHandler<HTMLInputElement>;
+  unit?: string | undefined;
+};
+
 function InputRange({
   label,
   id,
@@ -8,7 +17,7 @@ function InputRange({
   unit = "px",
   value,
   onChangeHandler,
-}) {
+}: InputRangeProps) {
   return (
     <>
       {label ? (
