@@ -22,9 +22,11 @@
   "scripts": {
     "fix": "pnpm run \"/^fix:.*/\"",
     "fix:formatting": "prettier . --write",
+    "fix:styles": "stylelint --fix \"apps/**/*.{css,scss}\"",
     "lint": "pnpm run \"/^lint:.*/\"",
     "lint:formatting": "prettier . --check",
     "lint:spelling": "cspell \"**\" --no-progress",
+    "lint:styles": "stylelint \"apps/**/*.{css,scss}\"",
     "prepare": "husky"
   },
   "optionalDependencies": {
@@ -40,6 +42,7 @@
     "cspell": "^8.19.4",
     "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
     "typescript": "~4.5.5"
   }
 }
