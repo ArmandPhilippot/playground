@@ -1,9 +1,10 @@
 import { useState } from "react";
 import MemeForm from "../MemeForm/MemeForm";
 import MemePreview from "../MemePreview/MemePreview";
+import type { HeadlineType } from "../Headline/Headline";
 
 function Main() {
-  const [headlines, setHeadlines] = useState([]);
+  const [headlines, setHeadlines] = useState<HeadlineType[]>([]);
 
   return (
     <main className="main">
