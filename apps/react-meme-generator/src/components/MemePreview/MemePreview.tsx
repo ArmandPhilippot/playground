@@ -1,6 +1,6 @@
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import Button from "../commons/Button";
-import Headline, { type HeadlineType } from "./Headline/Headline";
+import Headline, { type HeadlineType } from "../Headline/Headline";
 
 async function fetchMemes() {
   const response = await fetch("https://api.imgflip.com/get_memes");

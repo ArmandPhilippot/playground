@@ -6,8 +6,8 @@ import {
 } from "react";
 import Button from "../commons/Button";
 import Form from "../commons/Form";
-import MemeFieldset from "./MemeFieldset/MemeFieldset";
-import type { HeadlineType } from "../MemePreview/Headline/Headline";
+import MemeFieldset from "../MemeFieldset/MemeFieldset";
+import type { HeadlineType } from "../Headline/Headline";
 
 type MemeFormProps = {
   headlines: HeadlineType[];

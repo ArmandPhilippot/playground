@@ -7,8 +7,8 @@ import {
   type FormEvent,
   type SetStateAction,
 } from "react";
-import Form from "../../commons/Form";
-import Input from "../../commons/Input";
+import Form from "../commons/Form";
+import Input from "../commons/Input";
 
 export type HeadlineType = {
   id: number;

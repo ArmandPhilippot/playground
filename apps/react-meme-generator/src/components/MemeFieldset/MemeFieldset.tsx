@@ -5,12 +5,12 @@ import {
   type Dispatch,
   type SetStateAction,
 } from "react";
-import Button from "../../commons/Button";
-import Fieldset from "../../commons/Fieldset";
-import Input from "../../commons/Input";
-import InputRange from "../../commons/InputRange";
-import Select from "../../commons/Select";
-import type { HeadlineType } from "../../MemePreview/Headline/Headline";
+import Button from "../commons/Button";
+import Fieldset from "../commons/Fieldset";
+import Input from "../commons/Input";
+import InputRange from "../commons/InputRange";
+import Select from "../commons/Select";
+import type { HeadlineType } from "../Headline/Headline";
 
 type MemeFieldsetProps = {
   headline: HeadlineType;
