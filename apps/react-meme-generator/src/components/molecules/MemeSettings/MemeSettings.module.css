@@ -1,0 +1,20 @@
+.settings {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  width: fit-content;
+  position: relative;
+}
+
+.settings-group {
+  flex: 1;
+  position: relative;
+}
+
+.settings-btn {
+  position: absolute;
+  top: -2rem;
+  right: -0.25rem;
+  padding: 0.4rem;
+}

@@ -2,10 +2,12 @@
  * @type {import('lint-staged').Configuration}
  */
 const config = {
-    "*": [
-      "cspell --no-must-find-files --no-progress",
-      "prettier --write --ignore-unknown",
-    ],
-  };
+  "**/*.(md|json)": "prettier --write",
+  "**/*.scss": ["stylelint --fix", "prettier --write"],
+  "*": [
+    "cspell --no-must-find-files --no-progress",
+    "prettier --write --ignore-unknown",
+  ],
+};
 
-  export default config;
+export default config;

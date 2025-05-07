@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-accent);
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 0 0 var(--btn-accent);
+  color: var(--btn-accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:where([data-kind="add"]) {
+  --btn-bg: rgb(222 250 211);
+  --btn-accent: rgb(32 66 22);
+}
+
+.btn:where([data-kind="delete"]) {
+  --btn-bg: rgb(253 211 211);
+  --btn-accent: rgb(85 29 29);
+}
+
+.btn:where([data-kind="neutral"]) {
+  --btn-bg: rgb(234 237 238);
+  --btn-accent: rgb(51 54 54);
+}
+
+.btn:is(:hover, :focus) {
+  background: hsl(from var(--btn-bg) h s calc(l + 1.5));
+}

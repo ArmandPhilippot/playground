@@ -1,0 +1,24 @@
+.header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.main {
+  --col-width: 550px;
+  --gap: 2rem;
+
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, var(--col-width)));
+  gap: var(--gap);
+  justify-content: center;
+  width: 100%;
+  max-width: calc(var(--col-width) * 2 + var(--gap));
+  margin: 2rem auto;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 2rem 0;
+}
