@@ -1,1 +1,10 @@
-{ "extends": "../../tsconfig.json", "include": ["src"] }
+{
+  "extends": "../../tsconfig.json",
+  "exclude": ["build", "node_modules"],
+  "include": ["src"],
+  "compilerOptions": {
+    "noPropertyAccessFromIndexSignature": false,
+    "strict": true,
+    "strictNullChecks": true
+  }
+}
