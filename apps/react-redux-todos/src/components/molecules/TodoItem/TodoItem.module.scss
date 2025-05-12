@@ -1,0 +1,31 @@
+@use "../../../styles/abstracts/variables" as var;
+
+.todo-item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  &:not(:first-child) {
+    border-top: 1px solid #000;
+  }
+}
+
+.todo-title {
+  background-image: linear-gradient(
+    to top,
+    transparent calc(50% - 3px),
+    var.$done-color calc(50% - 3px),
+    var.$done-color 50%,
+    transparent 50%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  transition: background-size 0.3s ease-in-out 0s;
+}
+
+.todo-item[data-done="true"] .todo-title {
+  background-size: 100% 100%;
+}

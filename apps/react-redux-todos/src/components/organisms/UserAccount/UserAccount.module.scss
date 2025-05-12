@@ -1,0 +1,15 @@
+.account-details {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+}
+
+.account-details-label {
+  grid-column: 1;
+  font-weight: 600;
+}
+
+.account-details-data {
+  grid-column: 2;
+}
