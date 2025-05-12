@@ -1,0 +1,15 @@
+@use "../../../styles/abstracts/variables" as var;
+
+.login-form {
+  width: fit-content;
+  margin: auto;
+}
+
+.login-btn {
+  margin-block-start: 1rem;
+}
+
+.login-error {
+  color: var.$error-color;
+  font-weight: 700;
+}

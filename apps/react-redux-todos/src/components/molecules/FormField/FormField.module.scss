@@ -1,0 +1,35 @@
+@use "../../../styles/abstracts/variables" as var;
+
+.form-field {
+  &[data-inline="true"] {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  input,
+  textarea {
+    border: 2px solid var.$primary-color;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:has(input:not([type="checkbox"]), textarea) + * {
+    margin-top: 1rem;
+  }
+
+  :is(input:not([type="checkbox"]), textarea) {
+    width: 100%;
+    padding: 0.5rem;
+
+    &:focus {
+      box-shadow: 2px 2px 2px var.$shadow-color;
+      outline: none;
+      transform: translateY(-2px) translateX(-2px);
+    }
+  }
+
+  &:where(:not([data-inline="true"])) .form-field-label {
+    margin-bottom: 0.5rem;
+  }
+}

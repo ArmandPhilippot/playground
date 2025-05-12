@@ -1,0 +1,35 @@
+@use "../../../styles/abstracts/variables" as var;
+
+.single-todo {
+  display: flex;
+  flex-flow: column;
+  margin-top: 2rem;
+  padding: 3px;
+  border: 1px solid #000;
+}
+
+.single-todo-field {
+  padding: 0.5rem 1rem;
+  resize: none;
+  line-height: inherit;
+  border: 1px solid transparent;
+
+  &:read-only {
+    border: none;
+  }
+
+  &:is(input) {
+    font-size: 1.2rem;
+  }
+
+  &:is(textarea) {
+    margin-top: 0.5rem;
+    min-height: 10rem;
+    font-size: 1rem;
+  }
+
+  &:focus-within {
+    outline: 2px solid var.$primary-color-light;
+    outline-offset: 2px;
+  }
+}

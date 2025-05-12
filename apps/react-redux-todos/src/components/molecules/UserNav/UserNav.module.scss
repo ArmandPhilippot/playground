@@ -1,0 +1,25 @@
+@use "../../../styles/abstracts/mixins" as mix;
+@use "../../../styles/abstracts/variables" as var;
+
+.user-nav {
+  border: 1px solid var.$primary-color;
+  box-shadow: 0 2px 3px 0 var.$shadow-color;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1.15rem;
+    left: calc(50% - 1.15rem / 2);
+    @include mix.triangle(1.2rem, var.$primary-color, up);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: calc(50% - 1rem / 2);
+    @include mix.triangle(1rem, var.$background-color, up);
+  }
+}
